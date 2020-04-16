@@ -3,12 +3,22 @@ var data = [];
 var m = 0;
 var b = 0;
 
+var learning_rate = 0.05;
+
+function display(){
+  document.getElementById("learnRate").value = learning_rate;
+}
+
+function change_rate(){
+  learning_rate = document.getElementById("learnRate").value;
+  display();
+}
+
 function setup() {
   createCanvas(400, 400);
 }
 
 function gradientDescent() {
-  var learning_rate = 0.05;
   for (var i = 0; i < data.length; i++) {
     var x = data[i].x;
     var y = data[i].y;
@@ -38,8 +48,11 @@ function drawLine() {
 function mousePressed() {
   var x = map(mouseX, 0, width, 0, 1);
   var y = map(mouseY, 0, height, 1, 0);
-  var point = createVector(x, y);
-  data.push(point);
+  console.log(x,y)
+  if(x>=0 && x<=1 && y>=0 && y<=1){
+    var point = createVector(x, y);
+    data.push(point);
+  }
 }
 
 function draw() {

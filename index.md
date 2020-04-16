@@ -9,6 +9,8 @@
   <!-- this line removes any default padding and style. you might only need one of these values set. -->
 </head>
 
-<body>
+<body onload="display()">
+	<input type="text" id="learnRate" name="learnRate">
+	<input type="submit" name="Submit" onclick="change_rate()">
 </body>
 </html>
