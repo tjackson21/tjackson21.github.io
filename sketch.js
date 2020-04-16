@@ -48,10 +48,13 @@ function drawLine() {
 function mousePressed() {
   var x = map(mouseX, 0, width, 0, 1);
   var y = map(mouseY, 0, height, 1, 0);
-  console.log(x,y)
   if(x>=0 && x<=1 && y>=0 && y<=1){
+  	console.log(x,y)
     var point = createVector(x, y);
     data.push(point);
+  }
+  else{
+  	console.log("Point out of canvas bounds")
   }
 }
 
