@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Corona Tester</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<script type="text/javascript" src="java.js"></script>
+</head>
+<body onload="console.log('Guide Used: https://towardsdatascience.com/predicting-the-survival-of-titanic-passengers-30870ccc7e8')">
+<form id="myForm" onsubmit="return false">
+	<div id="State">
+	<label>State:</label><br>
+	<select name="st" id="st">
+		<script type="text/javascript">
+			var x = document.getElementById("st");
+			var states = [	"Alabama",
+							"Alaska",
+							"Arizona",
+							"Arkansas",
+							"California",
+							"Colorado",
+							"Connecticut",
+							"Delaware",
+							"District of Columbia",
+							"Florida",
+							"Georgia",
+							"Hawaii",
+							"Idaho",
+							"Illinois",
+							"Indiana",
+							"Iowa",
+							"Kansas",
+							"Kentucky",
+							"Louisiana",
+							"Maine",
+							"Maryland",
+							"Massachusetts",
+							"Michigan",
+							"Minnesota",
+							"Mississippi",
+							"Missouri",
+							"Montana",
+							"Nebraska",
+							"Nevada",
+							"New Hampshire",
+							"New Jersey",
+							"New Mexico",
+							"New York",
+							"North Carolina",
+							"North Dakota",
+							"Ohio",
+							"Oklahoma",
+							"Oregon",
+							"Pennsylvania",
+							"Rhode Island",
+							"South Carolina",
+							"South Dakota",
+							"Tennessee",
+							"Texas",
+							"Utah",
+							"Vermont",
+							"Virginia",
+							"Washington",
+							"West Virginia",
+							"Wisconsin",
+							"Wyoming"];
+			for(var i=0; i<states.length; i++){
+				var op = document.createElement("option");
+				op.text = states[i];
+				op.value = i;
+				x.add(op);
+			}
+		</script>
+	</select>
+	</div>
+
+	<div id="Sex">
+	<label>Sex:</label><br>
+	<input type="radio" id="male" name="gender" value="0" checked="checked">
+	<label for="male">Male</label><br>
+	<input type="radio" id="female" name="gender" value="1">
+	<label for="female">Female</label>
+	</div>
+
+	<div id="AG">
+	<label>Age Group:</label><br>
+	<select name="age" id="age">
+		<option value="0">Under 5 years</option>
+		<option value="1">5-14 years</option>
+		<option value="2">15-24 years</option>
+		<option value="3">25-34 years</option>
+		<option value="4">35-44 years</option>
+		<option value="5">45-54 years</option>
+		<option value="6">55-64 years</option>
+		<option value="7">65-74 years</option>
+		<option value="8">75-84 years</option>
+		<option value="9">85 years and over</option>
+	</select>
+	</div>
+
+	<input type="submit" value="Submit" onclick="myFunc()">
+
+</form>
+<br><br>
+<div id="ans">
+	<p id="answerText"></p>
+</div>
+</body>
+</html>

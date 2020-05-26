@@ -1,0 +1,23 @@
+#State{
+	float:left;
+}
+
+#Sex{
+	float:left;
+}
+
+#AG{
+	float:right;
+}
+
+div{
+	width:33%;
+	height:75px;
+	padding:10,10,10,10;
+	padding-color: white;
+	align-items: center;
+}
+
+#ans{
+	margin:auto;
+}
